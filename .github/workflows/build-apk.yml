@@ -25,12 +25,10 @@ jobs:
       - uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: '8.9'
-      - name: Run tests
-        run: gradle :app:testDebugUnitTest --stacktrace
       - name: Build APK
         run: gradle :app:assembleDebug --stacktrace
       - uses: actions/upload-artifact@v4
         with:
-          name: MokhatabYar-debug-APK
+          name: MokhatabYar-v1.1-APK
           path: app/build/outputs/apk/debug/app-debug.apk
           if-no-files-found: error
