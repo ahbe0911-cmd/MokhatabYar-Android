@@ -107,6 +107,7 @@ public final class MainActivity extends Activity {
     private void layout() {
         ScrollView scroll = new ScrollView(this);
         scroll.setFillViewport(true);
+        scroll.setFitsSystemWindows(true);
         scroll.setBackgroundColor(Color.rgb(244, 249, 250));
         LinearLayout root = new LinearLayout(this);
         root.setPadding(dp(20), dp(30), dp(20), dp(30));
